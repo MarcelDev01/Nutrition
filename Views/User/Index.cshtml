@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="VueRegisterUser" class="container-fluid">
+    <h1 class="m-0">Usuários</h1>
+
+    <!-- Filters -->
+    <nav class="mt-5">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-filter-tab" data-bs-toggle="tab" data-bs-target="#nav-filter" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Filtros</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-filter" role="tabpanel" aria-labelledby="nav-filter-tab">
+            <div class="row mt-4">
+                <div class="mb-3 col-3">
+                    <label for="filterName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="filterName" placeholder="Nome">
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="filterName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="filterName" placeholder="Nome">
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="filterName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="filterName" placeholder="Nome">
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="filterName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="filterName" placeholder="Nome">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row mt-4 col-12">
+        <div class="col-5">
+            <button type="button" class="btn btn-primary btn-small p-2">
+                <i class='bx bx-search-alt'></i>
+                <span>Pesquisar</span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-small p-2">
+                <i class='bx bx-trash-alt'></i>
+                <span>Limpar</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Tables -->
+    <table class="table table-responsive">
+        <tbody>
+
+        </tbody>
+        <thead>
+
+        </thead>
+    </table>
+
+</section>
+

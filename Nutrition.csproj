@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Language\EN\BodyAssessment\" />
+    <Folder Include="Language\EN\Food\" />
+    <Folder Include="Language\EN\Consultation\" />
+    <Folder Include="Language\EN\Shared\" />
+    <Folder Include="Language\EN\Trainning\" />
+    <Folder Include="Language\EN\User\" />
+    <Folder Include="Language\PT-BR\Consultation\" />
+    <Folder Include="Language\PT-BR\BodyAssessment\" />
+    <Folder Include="Language\PT-BR\Food\" />
+    <Folder Include="Language\PT-BR\Shared\" />
+    <Folder Include="Language\PT-BR\Trainning\" />
+    <Folder Include="Views\Report\" />
+  </ItemGroup>
+
+</Project>

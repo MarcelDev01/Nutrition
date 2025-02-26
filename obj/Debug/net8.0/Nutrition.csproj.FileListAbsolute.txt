@@ -170,3 +170,4 @@ C:\Users\diego\source\repos\Nutrition\obj\Debug\net8.0\Nutrition.csproj.Assembly
 C:\Users\diego\source\repos\Nutrition\obj\Debug\net8.0\Nutrition.csproj.Up2Date
 C:\Users\diego\source\repos\Nutrition\bin\Debug\net8.0\package-lock.json
 C:\Users\diego\source\repos\Nutrition\bin\Debug\net8.0\package.json
+C:\Users\diego\source\repos\Nutrition\obj\Debug\net8.0\Nutrition.sourcelink.json

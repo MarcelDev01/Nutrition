@@ -127,5 +127,6 @@ namespace Nutrition.Models.DataBase
 
         // Método para ordenar os registros
         IEnumerable<T> GetOrdered<TKey>(Expression<Func<T, TKey>> orderBy, bool descending = false);
+
     }
 }

@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="VueRegisterUser" class="fw-bolder">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="m-0 text-black-50 justify-content-start" v-show="QueryString.UserId > 0">Detalhes do usuário</h2>
+        <h2 class="m-0 text-black-50 justify-content-start" v-show="QueryString.UserId == 0">Cadastro de usuário</h2>
+    </div>
+
+    <div class="card shadow-lg mt-5">
+        <div class="card-header text-black-50 bg-white">
+            <h4 class="fw-bold m-0">Informações</h4>
+        </div>
+        <div class="card-body p-5">
+            <form class="row g-3">
+                <div class="col-8">
+                    <label for="txtName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="txtName" placeholder="Nome completo" maxlength="100" v-model="User.Name">
+                </div>
+                <div class="col-md-4">
+                    <label for="txtPermission" class="form-label">Permissão</label>
+                    <select id="txtPermission" class="form-select" v-model="User.Permission">
+                        <option value="0" selected>Selecione...</option>
+                        <option value="1">Nutricionista</option>
+                        <option value="2">Personal</option>
+                        <option value="3">Paciente</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="txtBirthDay" class="form-label">Data de nascimento</label>
+                    <input type="date" class="form-control" id="txtBirthDay" placeholder="dd/mm/yyyy" v-model="User.Birthday">
+                </div>
+                <div class="col-3">
+                    <label for="txtAge" class="form-label">Idade</label>
+                    <input type="number" class="form-control" id="txtAge" placeholder="Idade" v-model="User.Age">
+                </div>
+                <div class="col-3">
+                    <label for="txtHeight" class="form-label">Altura</label>
+                    <input type="number" class="form-control" id="txtHeight" placeholder="Altura" v-model="User.Height">
+                </div>
+                <div class="col-3">
+                    <label for="txtWeight" class="form-label">Peso</label>
+                    <input type="number" class="form-control" id="txtWeight" placeholder="Peso" v-model="User.Weight">
+                </div>
+                <div class="col-md-4">
+                    <label for="txtEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="txtEmail" placeholder="Email" maxlength="100" v-model="User.Email">
+                </div>
+                <div class="col-md-4">
+                    <label for="txtLogin" class="form-label">Login</label>
+                    <input type="text" class="form-control" id="txtLogin" placeholder="Login" maxlength="100" v-model="User.Login">
+                </div>
+                <div class="col-md-4">
+                    <label for="txtPwd" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="txtPwd" placeholder="Senha" maxlength="100" v-model="User.Password">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chkFlgActive" v-model="User.FlgActive">
+                        <label class="form-check-label" for="chkFlgActive">
+                            Usuário ativo
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="d-flex justify-content-start align-items-center bg-white shadow-lg m-0 p-3">
+        <button type="button" class="btn btn-success btn-sm fw-bold d-flex align-items-center me-1" v-on:click="SaveUser()">
+            <i class='bx bxs-save me-1'></i>
+            <span>Salvar</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm fw-bold d-flex align-items-center" v-on:click="RedirectPageIndex()">
+            <i class='bx bx-arrow-back me-1'></i>
+            <span>Voltar</span>
+        </button>
+    </footer>
+</section>
+
+@section Scripts {
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    QueryString: {
+                        UserId: 0
+                    },
+                    User: {
+                        UserId: 0,
+                        Name: "",
+                        Permission: 0,
+                        Birthday: "",
+                        Age: 0,
+                        Height: 0,
+                        Weight: 0,
+                        Email: "",
+                        Login: "",
+                        Password: "",
+                        FlgActive: false
+                    }
+                };
+            },
+            methods: {
+                SaveUser: function () {
+                    var _this = this;
+
+                    _this.User.UserId = _this.QueryString.UserId || 0;
+
+                    axios.post('/User/SaveUser', { p_Data: _this.User },
+                    {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(result => {
+                        _this.User = result.data;
+                    })
+                    .catch(error => console.error('Erro ao trazer os dados de usuario:', error));
+                },
+
+                GetDetailsUser: function () {
+                    var _this = this;
+
+                    axios.get('/User/GetDetailsUser', {
+                        params: { p_UserId: _this.QueryString.UserId }
+                    })
+                    .then(result => {
+                        _this.User = result.data;
+                    })
+                    .catch(error => console.error('Erro ao trazer os dados de usuario:', error));
+                },
+
+                GetQueryString: function () {
+                    var _this = this;
+
+                    let urlParams = new URLSearchParams(window.location.search);
+
+                    _this.QueryString.UserId = urlParams.get("UserId") || 0;
+
+                },
+
+                RedirectPageIndex: function () {
+                    window.location.href = '@Url.Action("Index", "User")';
+                }
+            },
+            mounted: function (){
+                this.GetQueryString();
+                this.GetDetailsUser();
+            }
+        });
+        app.mount("#VueRegisterUser");
+    </script>
+}
+

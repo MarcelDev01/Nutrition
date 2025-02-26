@@ -1,10 +1,16 @@
-﻿const hamburger = document.querySelector(".toggle-btn");
-const toggler = document.querySelector("#icon");
+﻿let arrow = document.querySelectorAll(".arrow");
 
-hamburger.addEventListener("click", function()
-{
-    document.querySelector("#sidebar").classList.toggle("expand");
+for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+    });
+}
 
-    toggler.classList.toggle("bxs-chevron-right");
-    toggler.classList.toggle("bxs-chevron-left");
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
+
+console.log(sidebarBtn);
+sidebarBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
 });

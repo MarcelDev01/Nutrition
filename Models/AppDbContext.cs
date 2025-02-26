@@ -7,7 +7,7 @@ namespace Nutrition.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<DataBase.User> Users { get; set; }
         public DbSet<Consultation> Consultations { get; set; }
         public DbSet<BodyAssessment> BodyAssessments { get; set; }
         public DbSet<Trainning> Trainnings { get; set; }

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Nutrition.Models;
 using Nutrition.Models.DataBase;
 using Nutrition.Services.Login;
+using Nutrition.Services.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 #region Services
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IUserService, UserService>();
 #endregion
 
 #region Autenticação

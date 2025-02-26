@@ -21,7 +21,7 @@ namespace Nutrition.Models.DataBase
         public int Age { get; set; }
 
         [Required]
-        [Column("BIRTHDAT")]
+        [Column("BIRTHDAY")]
         public DateOnly Birthday { get; set; }
 
         [Required]

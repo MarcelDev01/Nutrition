@@ -5,18 +5,18 @@ namespace Nutrition.Services.Login
 {
     public class LoginService : ILoginService
     {
-        private readonly IRepository<User> _Repository;
+        private readonly IRepository<Models.DataBase.User> _Repository;
 
-        public LoginService(IRepository<User> p_Repository)
+        public LoginService(IRepository<Models.DataBase.User> p_Repository)
         {
             _Repository = p_Repository;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<Models.DataBase.User> GetAllUsers()
         {
             try
             {
-                IEnumerable<User> l_Users = _Repository.GetAll();
+                IEnumerable<Models.DataBase.User> l_Users = _Repository.GetAll();
 
                 return l_Users;
 
@@ -32,7 +32,7 @@ namespace Nutrition.Services.Login
             try
             {
                 bool l_Return = false;
-                User l_User = new User();
+                Models.DataBase.User l_User = new Models.DataBase.User();
 
                 if (string.IsNullOrEmpty(p_Email) || string.IsNullOrEmpty(p_Password))
                 {

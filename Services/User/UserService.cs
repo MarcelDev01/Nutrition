@@ -1,24 +1,42 @@
 ﻿using Nutrition.Models.DataBase;
+using Nutrition.Models.Helpers;
 using Nutrition.Models.User;
 
 namespace Nutrition.Services.User
 {
     public class UserService : IUserService
     {
-		private readonly IRepository<Models.DataBase.User> _repository;
+		private readonly IRepository<Models.DataBase.User> _UserRepository;
+		private readonly IRepository<Permission> _PermissionRepository;
 
-		public UserService(IRepository<Models.DataBase.User> repository)
+		public UserService(IRepository<Models.DataBase.User> UserRepository, 
+			               IRepository<Permission> PermissionRepository)
         {
-            _repository = repository;
+            _UserRepository = UserRepository;
+            _PermissionRepository = PermissionRepository;
         }
 
-        public IEnumerable<Models.DataBase.User> GetUsers()
+        public IEnumerable<Models.DataBase.User> GetUsers(FilterUserViewModel p_Data)
         {
 			try
 			{
 				IEnumerable<Models.DataBase.User> l_Users = [];
+                IQueryable<Models.DataBase.User> l_QueryableUser = _UserRepository.AllNotList();
 
-				l_Users = _repository.GetAll();
+                #region Filters
+                if (!string.IsNullOrEmpty(p_Data.Name))
+				{
+                    l_QueryableUser = l_QueryableUser.Where(w => w.Name.ToUpper().Contains(p_Data.Name.ToUpper()));
+
+                }
+
+				if (!string.IsNullOrEmpty(p_Data.Email))
+				{
+                    l_QueryableUser = l_QueryableUser.Where(w => w.Email.ToUpper().Contains(p_Data.Email.ToUpper()));
+                }
+                #endregion
+
+                l_Users = l_QueryableUser.ToList();
 
                 return l_Users;
 			}
@@ -28,7 +46,24 @@ namespace Nutrition.Services.User
 			}
         }
 
-		public Models.DataBase.User GetDetailsUser(int p_UserId)
+        public IEnumerable<Permission> GetPermissions()
+        {
+            try
+            {
+				IEnumerable<Permission> l_Permissions = [];
+
+                l_Permissions = _PermissionRepository.All();
+
+                return l_Permissions;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public Models.DataBase.User GetDetailsUser(int p_UserId)
 		{
 			try
 			{
@@ -36,7 +71,7 @@ namespace Nutrition.Services.User
 
 				if(p_UserId != 0)
 				{
-					l_User = _repository.GetById(p_UserId);
+					l_User = _UserRepository.GetById(p_UserId);
 				}
 
 				return l_User;
@@ -74,26 +109,47 @@ namespace Nutrition.Services.User
 					l_UserInsertOrUpdate.Weight = p_Data.Weight;
 					l_UserInsertOrUpdate.Email = p_Data.Email;
 					l_UserInsertOrUpdate.Login = p_Data.Login;
-					l_UserInsertOrUpdate.Password = p_Data.Password;
 					l_UserInsertOrUpdate.FlgActive = p_Data.FlgActive ? "S" : "N";
+
+					l_UserInsertOrUpdate.Password = PasswordHelper.HashPassword(p_Data.Password);
 
 					if (p_Data.UserId != 0)
 					{
-                        _repository.Update(l_UserInsertOrUpdate);
+						l_UserInsertOrUpdate.UserId = p_Data.UserId;
+
+                        _UserRepository.Update(l_UserInsertOrUpdate);
 					}
 					else
-                    {
-                        l_UserIdMax = _repository.GetAll().Max(x => x.UserId) + 1;
+					{
+                        l_UserIdMax = GetNextId();
 
-                        l_UserInsertOrUpdate.UserId = l_UserIdMax;
+						l_UserInsertOrUpdate.UserId = l_UserIdMax;
 
-                        _repository.Add(l_UserInsertOrUpdate);
+                        _UserRepository.Add(l_UserInsertOrUpdate);
 					}
 				}
 			}
 			catch (Exception ex)
 			{
                 throw ex;
+			}
+		}
+
+		private int GetNextId()
+		{
+			try
+			{
+				int l_Result = 0;
+
+                IEnumerable<Models.DataBase.User> l_Users = _UserRepository.All();
+
+                l_Result = l_Users.Count() > 0 ? l_Users.Max(m => m.UserId) + 1 : 1;
+
+				return l_Result;
+            }
+			catch (Exception ex)
+			{
+				throw ex;
 			}
 		}
     }

@@ -15,6 +15,7 @@ namespace Nutrition.Controllers
             _userService = userService;
         }
 
+        #region Views
         public IActionResult Index()
         {
             return View();
@@ -23,13 +24,21 @@ namespace Nutrition.Controllers
         {
             return View();
         }
+        #endregion
 
         #region Methods
-        [HttpGet]
-        public IActionResult GetUsers()
+        [HttpPost]
+        public IActionResult GetUsers([FromBody] FilterUserViewModel p_Data)
         {
-            var users = _userService.GetUsers(); // Chama o serviço (interface)
+            var users = _userService.GetUsers(p_Data); // Chama o serviço (interface)
             return Json(users); // Retorna os dados como JSON para o Vue.js
+        }
+
+        [HttpGet]
+        public IActionResult GetPermissions()
+        {
+            var users = _userService.GetPermissions();
+            return Json(users);
         }
 
         [HttpGet]
@@ -48,7 +57,7 @@ namespace Nutrition.Controllers
             }
 
             _userService.SaveUser(p_Data);
-            return Ok(p_Data); // Retorna os dados salvos para o Vue.js
+            return Ok(p_Data);
         }
         #endregion
     }

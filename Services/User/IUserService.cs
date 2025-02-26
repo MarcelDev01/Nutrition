@@ -5,8 +5,9 @@ namespace Nutrition.Services.User
 {
     public interface IUserService
     {
-        IEnumerable<Models.DataBase.User> GetUsers();
+        IEnumerable<Models.DataBase.User> GetUsers(FilterUserViewModel p_Data);
         Models.DataBase.User GetDetailsUser(int p_UserId);
         void SaveUser(SaveUserViewModel p_Data);
+        IEnumerable<Permission> GetPermissions();
     }
 }

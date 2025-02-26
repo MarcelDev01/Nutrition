@@ -18,9 +18,14 @@ namespace Nutrition.Models.DataBase
         }
 
         // Buscar todos os registros de forma síncrona
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> All()
         {
             return _dbSet.ToList();  // Método síncrono ToList()
+        }
+
+        public IQueryable<T> AllNotList()
+        {
+            return _dbSet;
         }
 
         // Buscar por ID de forma síncrona
@@ -96,7 +101,8 @@ namespace Nutrition.Models.DataBase
     public interface IRepository<T> where T : class
     {
         // Método para buscar todos os registros
-        IEnumerable<T> GetAll();
+        IEnumerable<T> All();
+        IQueryable<T> AllNotList();
 
         // Método para buscar por ID
         T GetById(int id);

@@ -19,48 +19,46 @@
             <form class="row g-3">
                 <div class="col-8">
                     <label for="txtName" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="txtName" placeholder="Nome completo" maxlength="100" v-model="User.Name">
+                    <input type="text" class="form-control" id="txtName" placeholder="Nome completo" maxlength="100" v-model="User.name">
                 </div>
                 <div class="col-md-4">
                     <label for="txtPermission" class="form-label">Permissão</label>
-                    <select id="txtPermission" class="form-select" v-model="User.Permission">
+                    <select id="txtPermission" class="form-select" v-model="User.permission">
                         <option value="0" selected>Selecione...</option>
-                        <option value="1">Nutricionista</option>
-                        <option value="2">Personal</option>
-                        <option value="3">Paciente</option>
+                        <option v-for="data in ListPermissions" :value="data.permissionId">{{data.name}}</option>
                     </select>
                 </div>
                 <div class="col-3">
                     <label for="txtBirthDay" class="form-label">Data de nascimento</label>
-                    <input type="date" class="form-control" id="txtBirthDay" placeholder="dd/mm/yyyy" v-model="User.Birthday">
+                    <input type="date" class="form-control" id="txtBirthDay" placeholder="dd/mm/yyyy" v-model="User.birthday">
                 </div>
                 <div class="col-3">
                     <label for="txtAge" class="form-label">Idade</label>
-                    <input type="number" class="form-control" id="txtAge" placeholder="Idade" v-model="User.Age">
+                    <input type="number" class="form-control" id="txtAge" placeholder="Idade" v-model="User.age">
                 </div>
                 <div class="col-3">
                     <label for="txtHeight" class="form-label">Altura</label>
-                    <input type="number" class="form-control" id="txtHeight" placeholder="Altura" v-model="User.Height">
+                    <input type="number" class="form-control" id="txtHeight" placeholder="Altura" v-model="User.height">
                 </div>
                 <div class="col-3">
                     <label for="txtWeight" class="form-label">Peso</label>
-                    <input type="number" class="form-control" id="txtWeight" placeholder="Peso" v-model="User.Weight">
+                    <input type="number" class="form-control" id="txtWeight" placeholder="Peso" v-model="User.weight">
                 </div>
                 <div class="col-md-4">
                     <label for="txtEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Email" maxlength="100" v-model="User.Email">
+                    <input type="email" class="form-control" id="txtEmail" placeholder="Email" maxlength="100" v-model="User.email">
                 </div>
                 <div class="col-md-4">
                     <label for="txtLogin" class="form-label">Login</label>
-                    <input type="text" class="form-control" id="txtLogin" placeholder="Login" maxlength="100" v-model="User.Login">
+                    <input type="text" class="form-control" id="txtLogin" placeholder="Login" maxlength="100" v-model="User.login">
                 </div>
                 <div class="col-md-4">
                     <label for="txtPwd" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="txtPwd" placeholder="Senha" maxlength="100" v-model="User.Password">
+                    <input type="password" class="form-control" id="txtPwd" placeholder="Senha" maxlength="100" v-model="User.password">
                 </div>
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="chkFlgActive" v-model="User.FlgActive">
+                        <input class="form-check-input" type="checkbox" id="chkFlgActive" v-model="User.flgActive">
                         <label class="form-check-label" for="chkFlgActive">
                             Usuário ativo
                         </label>
@@ -91,29 +89,29 @@
                     QueryString: {
                         UserId: 0
                     },
-                    User: {
-                        UserId: 0,
-                        Name: "",
-                        Permission: 0,
-                        Birthday: "",
-                        Age: 0,
-                        Height: 0,
-                        Weight: 0,
-                        Email: "",
-                        Login: "",
-                        Password: "",
-                        FlgActive: false
-                    }
+                    User: {},
+                    ListPermissions: []
                 };
             },
             methods: {
                 SaveUser: function () {
                     var _this = this;
 
-                    _this.User.UserId = _this.QueryString.UserId || 0;
+                    var l_Object = {
+                        UserId: parseInt(_this.QueryString.UserId) || 0,
+                        Name: _this.User.name,
+                        Permission: parseInt(_this.User.permission) || 0,
+                        Birthday: _this.User.birthday,
+                        Age: _this.User.age,
+                        Email: _this.User.email,
+                        Login: _this.User.login,
+                        Password: _this.User.password,
+                        FlgActive: _this.User.flgActive,
+                        Height: _this.User.height,
+                        Weight: _this.User.weight,
+                    };
 
-                    axios.post('/User/SaveUser', { p_Data: _this.User },
-                    {
+                    axios.post('/User/SaveUser', l_Object, {
                         headers: {
                             'Content-Type': 'application/json'
                         }
@@ -124,6 +122,16 @@
                     .catch(error => console.error('Erro ao trazer os dados de usuario:', error));
                 },
 
+                GetPermissions: function () {
+                    var _this = this;
+
+                    axios.get('/User/GetPermissions')
+                    .then(result => {
+                        _this.ListPermissions = result.data;
+                    })
+                    .catch(error => console.error('Erro ao trazer os dados de permissão:', error));
+                },
+
                 GetDetailsUser: function () {
                     var _this = this;
 
@@ -132,6 +140,10 @@
                     })
                     .then(result => {
                         _this.User = result.data;
+
+                        _this.User.permission = _this.User.permissionId.toString();
+
+                        _this.User.flgActive = _this.User.flgActive == "S" ? true : false;
                     })
                     .catch(error => console.error('Erro ao trazer os dados de usuario:', error));
                 },
@@ -151,6 +163,7 @@
             },
             mounted: function (){
                 this.GetQueryString();
+                this.GetPermissions();
                 this.GetDetailsUser();
             }
         });

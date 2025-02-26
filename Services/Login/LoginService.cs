@@ -16,7 +16,7 @@ namespace Nutrition.Services.Login
         {
             try
             {
-                IEnumerable<Models.DataBase.User> l_Users = _Repository.GetAll();
+                IEnumerable<Models.DataBase.User> l_Users = _Repository.All();
 
                 return l_Users;
 
@@ -41,7 +41,7 @@ namespace Nutrition.Services.Login
                 else{
 
                     if (p_Password == PasswordHelper.HashPassword(p_Password))
-                        l_Return = _Repository.GetAll().Any(w => w.Email == p_Email && w.Password == p_Password);
+                        l_Return = _Repository.All().Any(w => w.Email == p_Email && w.Password == p_Password);
 
                 }
 

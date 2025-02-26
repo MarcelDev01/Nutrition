@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Styles{
-
+@section Styles
+{
     <style>
         thead {
             position: sticky;
@@ -51,11 +51,11 @@
             <div class="row mt-4">
                 <div class="mb-3 col-3">
                     <label for="filterName" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="filterName" placeholder="Pesquisar...">
+                    <input type="text" class="form-control" id="filterName" placeholder="Pesquisar..." v-model="Filters.Name">
                 </div>
                 <div class="mb-3 col-3">
                     <label for="filterName" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="filterName" placeholder="Pesquisar...">
+                    <input type="text" class="form-control" id="filterName" placeholder="Pesquisar..." v-model="Filters.Email">
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
     </div>
 
     <!-- Content -->
-    <div v-show="ListUser.length > 0">
+    <div v-show="ListUser.length != 0">
         <span class="text-black-50">Total de usuários encontrados: {{ListUser.length}}</span>
         <div class="card text-center table-responsive border-0 shadow-lg">
             <table class="table table-hover table-borderless m-0">
@@ -89,11 +89,11 @@
                 </thead>
                 <tbody class="table-bordless text-black-50">
                     <tr v-for="user in ListUser">
-                        <td scope="col">{{user.Name}}</td>
-                        <td scope="col">{{user.Email}}</td>
-                        <td scope="col">
-                            <button type="button" class="btn btn-info btn-sm fw-bold d-flex align-items-center" v-on:click="RedirectPageRegister(user.UserId)">
-                                <i class='bx bx-edit'></i>
+                        <td scope="col">{{user.name}}</td>
+                        <td scope="col">{{user.email}}</td>
+                        <td scope="col" class="d-flex justify-content-center align-content-center">
+                            <button type="button" class="btn btn-primary btn-sm fw-bold d-flex align-items-center justify-content-center" v-on:click="RedirectPageRegister(user.userId)">
+                                <i class='bx bx-edit me-1'></i>
                                 <span>Editar</span>
                             </button>
                         </td>
@@ -104,7 +104,7 @@
     </div>
 
     <!-- Not Found -->
-    <div v-show="ListUser.length == 0" class="d-flex flex-column align-items-center justify-content-center text-black-50 mt-5">
+    <div v-if="ListUser.length == 0" class="d-flex flex-column align-items-center justify-content-center text-black-50 mt-5">
         <i class='bx bx-clipboard' id="NotFoundLogo"></i>
         <span class="mt-2" id="NotFoundText">Nenhum registro encontrado</span>
     </div>
@@ -131,10 +131,18 @@
                 GetUser: function() {
                     var _this = this;
 
-                    // Requisição ao servidor para obter os dados de usuários
-                    axios.get('/User/GetUsers')
+                    var l_Object = {
+                        Name: _this.Filters.Name,
+                        Email: _this.Filters.Email
+                    };
+
+                    axios.post('/User/GetUsers', l_Object, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
                     .then(result => {
-                        _this.ListUser = result.data; // Atualiza a lista de usuários com a resposta da API
+                        _this.ListUser = result.data;
                     })
                     .catch(error => console.error('Erro ao consultar usuarios:', error));
                 },

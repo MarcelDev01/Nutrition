@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Nutrition.Models.Login;
 using Nutrition.Models.User;
 using Nutrition.Services.User;
-using System.Xml.Linq;
 
 namespace Nutrition.Controllers
 {

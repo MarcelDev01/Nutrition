@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Nutrition.Models;
 using Nutrition.Models.DataBase;
@@ -27,18 +29,24 @@ builder.Services.AddAuthentication("Cookies")
     .AddCookie("Cookies", options =>
     {
         options.LoginPath = "/Login/Index"; // Redireciona para login se não autenticado
-        options.AccessDeniedPath = "/Login/Error"; // Redireciona para erro de permissão
+        options.AccessDeniedPath = "/Login/Index"; // Redireciona para erro de permissão
         options.ExpireTimeSpan = TimeSpan.FromDays(1); // Tempo de expiração do cookie
         options.SlidingExpiration = true; // Renova sessão caso esteja no final de expiração
     });
+
+builder.Services.AddControllersWithViews(options =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+    options.Filters.Add(new AuthorizeFilter(policy));
+});
+
 
 #endregion
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -55,7 +63,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication(); // Habilita a autenticação
+app.UseAuthorization();  // Habilita a autorização
 
 app.MapControllerRoute(
     name: "default",

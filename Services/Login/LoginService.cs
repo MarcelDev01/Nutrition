@@ -40,8 +40,9 @@ namespace Nutrition.Services.Login
                 }
                 else{
 
-                    if (p_Password == PasswordHelper.HashPassword(p_Password))
-                        l_Return = _Repository.All().Any(w => w.Email == p_Email && w.Password == p_Password);
+                    p_Password = PasswordHelper.HashPassword(p_Password);
+
+                    l_Return = _Repository.All().Any(w => w.Email == p_Email && w.Password == p_Password);
 
                 }
 

@@ -11,7 +11,7 @@
 
     @RenderSection("Styles", required: false)
 </head>
-<body>
+<body id="VueLayout">
 
     <div class="sidebar">
         <div class="logo-details">
@@ -83,10 +83,15 @@
         </ul>
     </div>
 
-
-    <section class="nav-section shadow">
-        <div class="nav-content">
+    <section class="nav-section shadow d-flex justify-content-between align-content-center">
+        <div class="nav-content d-flex justify-content-start align-content-center">
             <i class='bx bx-menu'></i>
+        </div>
+        <div class="nav-content-logout d-flex justify-content-center align-content-center p-3">
+            <a href="#" v-on:click="Logout()">
+                <i class='bx bx-log-out'></i>
+                <span class="text">Sair</span>
+            </a>
         </div>
     </section>
 
@@ -98,14 +103,43 @@
         </div>
     </section>
 
-
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/vue.js" asp-append-version="true"></script>
     <script src="~/js/axios.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    LogoutSucess: false,
+                };
+            },
+            methods: {
+                Logout: function() {
+                    var _this = this;
+
+                    axios.post('/Login/Logout')
+                    .then(result => {
+                        _this.LogoutSucess = result.data;
+
+                        if (_this.LogoutSucess){
+                            _this.RedirectPageLogout();
+                        }
+                    })
+                    .catch(error => console.error('Erro ao consultar usuarios:', error));
+                },
+
+                RedirectPageLogout: function (){
+                    window.location.href = '@Url.Action("Index", "Login")';
+                }
+            }
+        });
+        app.mount("#VueLayout");
+    </script>
 
 </body>
 </html>

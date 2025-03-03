@@ -7,9 +7,11 @@ using Nutrition.Models.DataBase;
 using Nutrition.Models.Login;
 using Nutrition.Services.Login;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Nutrition.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         private readonly ILoginService _LoginService;
@@ -52,13 +54,10 @@ namespace Nutrition.Controllers
         #region Logout
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
-            var l_SignOutTask = HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            l_SignOutTask.Wait();
-
-            return RedirectToAction("Index", "Login");
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme).Wait();
+            return Json(new { success = true, message = "Logout realizado com sucesso" });
         }
 
         private void CreateClaimAndCookies(LoginViewModel login)
@@ -75,7 +74,7 @@ namespace Nutrition.Controllers
                 var authProperties = new AuthenticationProperties { IsPersistent = true };
 
                 // Criar o Cookie de Autenticação
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties).Wait();
+                HttpContext.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity), authProperties).Wait();
             }
             catch (Exception)
             {

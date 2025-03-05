@@ -9,5 +9,6 @@ namespace Nutrition.Services.User
         Models.DataBase.User GetDetailsUser(int p_UserId);
         void SaveUser(SaveUserViewModel p_Data);
         IEnumerable<Permission> GetPermissions();
+        bool DeleteUser(int p_UserId);
     }
 }

@@ -135,6 +135,30 @@ namespace Nutrition.Services.User
 			}
 		}
 
+		public bool DeleteUser(int p_UserId) 
+		{
+			try
+			{
+				bool l_Result = false;
+                Models.DataBase.User l_UserDelete = new Models.DataBase.User();
+
+				if (p_UserId != 0)
+				{
+					l_UserDelete = _UserRepository.FirstOrDefault(f => f.UserId == p_UserId);
+
+					_UserRepository.Delete(l_UserDelete.UserId);
+
+					l_Result = true;
+                }
+
+				return l_Result;
+            }
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+		}
+
 		private int GetNextId()
 		{
 			try

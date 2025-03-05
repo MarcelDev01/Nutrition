@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Users";
+    ViewData["Title"] = "Usuários";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -84,7 +84,7 @@
                     <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Editar</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody class="table-bordless text-black-50">
@@ -92,9 +92,12 @@
                         <td scope="col">{{user.name}}</td>
                         <td scope="col">{{user.email}}</td>
                         <td scope="col" class="d-flex justify-content-center align-content-center">
-                            <button type="button" class="btn btn-primary btn-sm fw-bold d-flex align-items-center justify-content-center" v-on:click="RedirectPageRegister(user.userId)">
-                                <i class='bx bx-edit me-1'></i>
-                                <span>Editar</span>
+                            <button type="button" class="btn btn-outline-primary btn-sm fw-bold d-flex align-items-center justify-content-center me-1" v-on:click="RedirectPageRegister(user.userId)">
+                                <i class='bx bx-edit'></i>
+                            </button>
+
+                            <button type="button" class="btn btn-outline-danger btn-sm fw-bold d-flex align-items-center justify-content-center" v-on:click="DeleteUser(user.userId)">
+                                <i class='bx bx-trash'></i>
                             </button>
                         </td>
                     </tr>
@@ -156,6 +159,20 @@
 
                 RedirectPageRegister: function (p_UserId){
                     window.location.href = '@Url.Action("Register", "User")' + '?UserId=' + p_UserId;
+                },
+
+                DeleteUser: function (l_UserId){
+                    var _this = this;
+
+                    axios.get('/User/DeleteUser', {
+                        params: { p_UserId: l_UserId }
+                    })
+                    .then(result => {
+                       if (result.data.success){
+                           _this.GetUser();
+                       }
+                    })
+                    .catch(error => console.error('Erro ao deletar usuário:', error));
                 }
             }
         });

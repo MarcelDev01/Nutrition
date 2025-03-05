@@ -3,7 +3,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section id="VueFood" class="container-fluid">
-    <h1 class="m-0">Dietas</h1>
+<section id="VueFood" class="fw-bolder">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="m-0 text-black-50 justify-content-start">Dietas</h2>
+
+        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex justify-content-end align-items-center" @* v-on:click="RedirectPageRegister(QueryString.UserId)" *@>
+            <i class='bx bx-plus me-1'></i>
+            <span>Adicionar dieta</span>
+        </button>
+    </div>
 </section>
 

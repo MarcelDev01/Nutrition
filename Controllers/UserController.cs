@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Nutrition.Models.User;
 using Nutrition.Services.User;
+using System.Xml.Linq;
 
 namespace Nutrition.Controllers
 {
@@ -56,6 +57,24 @@ namespace Nutrition.Controllers
 
             _userService.SaveUser(p_Data);
             return Ok(p_Data);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteUser(int p_UserId)
+        {
+            if (p_UserId == 0)
+            {
+                return BadRequest("Dados inválidos.");
+            }
+
+            bool isDelete = _userService.DeleteUser(p_UserId);
+
+            if (!isDelete)
+            {
+                return Json(new { success = false, message = "Exclusão invalida" });
+            }
+
+            return Json(new { success = true, message = "Excluído com sucesso" });
         }
         #endregion
     }

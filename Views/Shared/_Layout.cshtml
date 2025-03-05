@@ -11,7 +11,7 @@
 
     @RenderSection("Styles", required: false)
 </head>
-<body id="VueLayout">
+<body>
 
     <div class="sidebar">
         <div class="logo-details">
@@ -21,7 +21,7 @@
         <ul class="nav-links">
             <hr class="my-0 bg-white" />
             <li>
-                <a href="#">
+                <a href="@Url.Action("Index","Home")">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -87,9 +87,9 @@
         <div class="nav-content d-flex justify-content-start align-content-center">
             <i class='bx bx-menu'></i>
         </div>
-        <div class="nav-content-logout d-flex justify-content-center align-content-center p-3">
-            <a href="#" v-on:click="Logout()">
-                <i class='bx bx-log-out'></i>
+        <div class="nav-content-logout d-flex justify-content-center align-items-center p-3" id="VueLayout">
+            <a href="#" v-on:click="Logout()" class="d-flex justify-content-center align-items-center p-3">
+                <i class='bx bx-log-out me-1'></i>
                 <span class="text">Sair</span>
             </a>
         </div>
@@ -112,7 +112,7 @@
     @RenderSection("Scripts", required: false)
 
     <script>
-        const app = Vue.createApp({
+        const appLayout = Vue.createApp({
             data() {
                 return {
                     LogoutSucess: false,
@@ -138,7 +138,7 @@
                 }
             }
         });
-        app.mount("#VueLayout");
+        appLayout.mount("#VueLayout");
     </script>
 
 </body>

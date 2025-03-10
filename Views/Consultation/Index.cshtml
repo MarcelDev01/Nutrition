@@ -8,10 +8,32 @@
     <div class="d-flex justify-content-between align-items-center">
         <h2 class="m-0 text-black-50 justify-content-start">Consultas</h2>
 
-        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex justify-content-end align-items-center" @* v-on:click="RedirectPageRegister(QueryString.UserId)" *@>
+        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex justify-content-end align-items-center" v-on:click="RedirectPageRegister(QueryString.ConsultationId)">
             <i class='bx bx-plus me-1'></i>
             <span>Adicionar consulta</span>
         </button>
     </div>
 </section>
 
+@section Scripts {
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    QueryString: {
+                       ConsultationId: 0
+                    }
+                };
+            },
+            methods: {
+
+                RedirectPageRegister: function (p_ConsultationId){
+                    window.location.href = '@Url.Action("Register", "Consultation")' + '?ConsultationId=' + p_ConsultationId;
+                },
+            }
+        });
+        app.mount("#VueConsultation");
+    </script>
+
+}

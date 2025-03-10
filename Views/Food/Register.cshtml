@@ -1,5 +1,88 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Cadastrar dietas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="VueRegisterFood" class="fw-bolder">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="m-0 text-black-50 justify-content-start" v-show="QueryString.UserId > 0">Detalhes do usuário</h2>
+        <h2 class="m-0 text-black-50 justify-content-start" v-show="QueryString.UserId == 0">Cadastro de usuário</h2>
+    </div>
+
+    <div class="card shadow-lg mt-5">
+        <div class="card-header text-black-50 bg-white">
+            <h4 class="fw-bold m-0">Informações</h4>
+        </div>
+        <div class="card-body p-5">
+            <form class="row g-3">
+                <div class="form-group row mb-3">
+                    <label for="timeFood" class="col-sm-2 col-form-label">Horário:</label>
+                    <div class="col-sm-2">
+                        <input type="time" class="form-control" id="timeFood" placeholder="00:00:00">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="txtUser" class="col-sm-2 col-form-label">Usuário:</label>
+                    <div class="col-sm-6">
+                        <select id="txtUser" class="form-select">
+                            <option value="0" selected>Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="txtFood" class="col-sm-2 col-form-label">Dieta:</label>
+                    <div class="col-sm-6">
+                        <select id="txtFood" class="form-select">
+                            <option value="0" selected>Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="txtName" class="col-sm-2 col-form-label">Nome:</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="txtName"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="d-flex justify-content-start align-items-center bg-white shadow-lg m-0 p-3">
+        <button type="button" class="btn btn-success btn-sm fw-bold d-flex align-items-center me-1"@*  v-on:click="SaveUser()" *@>
+            <i class='bx bxs-save me-1'></i>
+            <span>Salvar</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm fw-bold d-flex align-items-center" @* v-on:click="RedirectPageIndex()" *@>
+            <i class='bx bx-arrow-back me-1'></i>
+            <span>Voltar</span>
+        </button>
+    </footer>
+
+</section>
+
+@section Scripts {
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    QueryString: {
+                       FoodId: 0
+                    }
+                };
+            },
+            methods: {
+
+
+                RedirectPageIndex: function () {
+                    window.location.href = '@Url.Action("Index", "Food")';
+                }
+            }
+        });
+        app.mount("#VueRegisterFood");
+    </script>
+
 }

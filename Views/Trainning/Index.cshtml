@@ -8,10 +8,32 @@
     <div class="d-flex justify-content-between align-items-center">
         <h2 class="m-0 text-black-50 justify-content-start">Treinos</h2>
 
-        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex justify-content-end align-items-center" @* v-on:click="RedirectPageRegister(QueryString.UserId)" *@>
+        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex justify-content-end align-items-center" v-on:click="RedirectPageRegister(QueryString.TrainningId)">
             <i class='bx bx-plus me-1'></i>
             <span>Adicionar treino</span>
         </button>
     </div>
 </section>
 
+@section Scripts {
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    QueryString: {
+                       TrainningId: 0
+                    }
+                };
+            },
+            methods: {
+
+                RedirectPageRegister: function (p_TrainningId){
+                    window.location.href = '@Url.Action("Register", "Trainning")' + '?TrainningId=' + p_TrainningId;
+                },
+            }
+        });
+        app.mount("#VueTrainning");
+    </script>
+
+}

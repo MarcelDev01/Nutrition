@@ -3,6 +3,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section Styles
+{
+    <style>
+        thead {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra na parte inferior */
+        }
+
+        i {
+            font-size: 15px;
+        }
+
+        #NotFoundLogo {
+            font-size: 10rem;
+        }
+
+        #NotFoundText {
+            font-size: 20px;
+        }
+    </style>
+}
+
 <section id="VueBodyAssessment" class="fw-bolder">
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center">
@@ -13,6 +38,42 @@
             <span>Adicionar avaliação</span>
         </button>
     </div>
+
+    <!-- Filters -->
+    <nav class="mt-5">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active fw-bolder" id="nav-filter-tab" data-bs-toggle="tab" data-bs-target="#nav-filter" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Filtros</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-filter" role="tabpanel" aria-labelledby="nav-filter-tab">
+            <div class="row mt-4">
+                <div class="mb-3 col-3">
+                    <label for="filterUser" class="form-label">Usuário</label>
+                    <input type="text" class="form-control" id="filterUser" placeholder="Pesquisar..." v-model="Filters.User">
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="filterConsultation" class="form-label">Consulta</label>
+                    <input type="text" class="form-control" id="filterConsultation" placeholder="Pesquisar..." v-model="Filters.Consultation">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-start align-items-center my-3">
+        <button type="button" class="btn btn-primary btn-sm fw-bold d-flex align-items-center me-1" v-on:click="GetBodyAssessment()">
+            <i class='bx bx-search-alt me-1'></i>
+            <span>Pesquisar</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm fw-bold d-flex align-items-center" v-on:click="ClearFilter()">
+            <i class='bx bx-trash-alt me-1'></i>
+            <span>Limpar</span>
+        </button>
+    </div>
+
 </section>
 
 @section Scripts {
@@ -23,14 +84,59 @@
                 return {
                     QueryString: {
                         BodyAssessmentId: 0
-                    }
+                    },
+                    Filters: {
+                        User: "",
+                        Consultation: ""
+                    },
+                    ListBodyAssessment: [],
                 };
             },
             methods: {
 
+                GetBodyAssessment: function() {
+                    var _this = this;
+
+                    var l_Object = {
+                        Name: _this.Filters.Name,
+                        Email: _this.Filters.Email
+                    };
+
+                    axios.post('/BodyAssessment/GetBodyAssessment', l_Object, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(result => {
+                            _this.ListBodyAssessment = result.data;
+                    })
+                    .catch(error => console.error('Erro ao consultar as avaliações:', error));
+                },
+
+                ClearFilter: function (){
+                    var _this = this;
+
+                    _this.Filters.User = "";
+                    _this.Filters.Consultation = "";
+                },
+
                 RedirectPageRegister: function (p_BodyAssessmentId){
                     window.location.href = '@Url.Action("Register", "BodyAssessment")' + '?BodyAssessmentId=' + p_BodyAssessmentId;
                 },
+
+                DeleteBodyAssessment: function (l_BodyAssessmentId){
+                    var _this = this;
+
+                    axios.get('/BodyAssessment/DeleteBodyAssessment', {
+                        params: { p_BodyAssessmentId: l_BodyAssessmentId }
+                    })
+                    .then(result => {
+                        if (result.data.success){
+                            _this.GetBodyAssessment();
+                        }
+                    })
+                    .catch(error => console.error('Erro ao deletar avaliação corporal:', error));
+                }
             }
         });
         app.mount("#VueBodyAssessment");

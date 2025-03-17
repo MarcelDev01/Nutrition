@@ -1,6 +1,7 @@
 ﻿using Nutrition.Models.DataBase;
+using Nutrition.Models.Saves;
+using Nutrition.Models.Filters;
 using Nutrition.Models.Helpers;
-using Nutrition.Models.User;
 
 namespace Nutrition.Services.User
 {
@@ -20,7 +21,7 @@ namespace Nutrition.Services.User
         {
 			try
 			{
-				IEnumerable<Models.DataBase.User> l_Users = [];
+				IEnumerable<Models.DataBase.User> l_Users = new List<Models.DataBase.User>();
                 IQueryable<Models.DataBase.User> l_QueryableUser = _UserRepository.AllNotList();
 
                 #region Filters

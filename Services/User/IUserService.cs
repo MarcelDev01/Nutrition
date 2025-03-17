@@ -1,5 +1,6 @@
 ﻿using Nutrition.Models.DataBase;
-using Nutrition.Models.User;
+using Nutrition.Models.Filters;
+using Nutrition.Models.Saves;
 
 namespace Nutrition.Services.User
 {

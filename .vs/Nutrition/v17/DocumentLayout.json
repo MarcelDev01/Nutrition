@@ -3,64 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\Nutrition\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\food\\ifoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\food\\ifoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\food\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\food\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\consultation\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\consultation\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\bodyassessment\\bodyassessmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\bodyassessment\\bodyassessmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\consultation\\iconsultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\consultation\\iconsultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\bodyassessment\\ibodyassessmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\bodyassessment\\ibodyassessmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\trainning\\trainningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\trainning\\trainningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\controllers\\bodyassessmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:controllers\\bodyassessmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\trainning\\itrainningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\trainning\\itrainningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\food\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\food\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\trainning\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\trainning\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\trainning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\trainning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\consultation\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\consultation\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\food\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\food\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\bodyassessment\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\bodyassessment\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\models\\saves\\savesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:models\\saves\\savesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\bodyassessment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -71,8 +31,28 @@
       "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\consultation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\consultation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\models\\filters\\filterspages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:models\\filters\\filterspages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\services\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:services\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\food\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\food\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\bodyassessment\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|solutionrelative:views\\bodyassessment\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7BA0E08-78F9-4D30-A884-11CF70AFE2A4}|Nutrition.csproj|c:\\users\\diego\\source\\repos\\nutrition\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -86,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 265,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 13,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -103,20 +83,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Index.cshtml",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\User\\Index.cshtml",
               "RelativeToolTip": "Views\\User\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-25T22:05:32.861Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Register.cshtml",
@@ -125,24 +106,26 @@
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-10T14:23:14.19Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\BodyAssessment\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\BodyAssessment\\Index.cshtml",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\BodyAssessment\\Index.cshtml",
               "RelativeToolTip": "Views\\BodyAssessment\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAADoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-05T20:05:08.458Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\BodyAssessment\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\BodyAssessment\\Register.cshtml",
@@ -155,134 +138,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Consultation\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Consultation\\Index.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Consultation\\Index.cshtml",
-              "RelativeToolTip": "Views\\Consultation\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T20:06:41.95Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Consultation\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Consultation\\Register.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Consultation\\Register.cshtml",
-              "RelativeToolTip": "Views\\Consultation\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T14:16:22.384Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Food\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Food\\Index.cshtml",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Food\\Index.cshtml",
               "RelativeToolTip": "Views\\Food\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-05T20:06:43.764Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Food\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Food\\Register.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Food\\Register.cshtml",
-              "RelativeToolTip": "Views\\Food\\Register.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAcwDEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T14:16:36.177Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Trainning\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Trainning\\Index.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Trainning\\Index.cshtml",
-              "RelativeToolTip": "Views\\Trainning\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T20:06:48.511Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Trainning\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Trainning\\Register.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Views\\Trainning\\Register.cshtml",
-              "RelativeToolTip": "Views\\Trainning\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T14:16:57.207Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TrainningService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Trainning\\TrainningService.cs",
-              "RelativeDocumentMoniker": "Services\\Trainning\\TrainningService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Trainning\\TrainningService.cs",
-              "RelativeToolTip": "Services\\Trainning\\TrainningService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:06:21.885Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ITrainningService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Trainning\\ITrainningService.cs",
-              "RelativeDocumentMoniker": "Services\\Trainning\\ITrainningService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Trainning\\ITrainningService.cs",
-              "RelativeToolTip": "Services\\Trainning\\ITrainningService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:06:45.383Z",
+              "WhenOpened": "2025-03-17T18:44:11.77Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\User\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\User\\IUserService.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\User\\IUserService.cs",
+              "RelativeToolTip": "Services\\User\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T19:24:47.729Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\User\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\User\\UserService.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\User\\UserService.cs",
+              "RelativeToolTip": "Services\\User\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T18:59:13.612Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 265,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FiltersPages.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Models\\Filters\\FiltersPages.cs",
+              "RelativeDocumentMoniker": "Models\\Filters\\FiltersPages.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Models\\Filters\\FiltersPages.cs",
+              "RelativeToolTip": "Models\\Filters\\FiltersPages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T18:46:29.451Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BodyAssessmentService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\BodyAssessmentService.cs",
-              "RelativeDocumentMoniker": "Services\\BodyAssessment\\BodyAssessmentService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\BodyAssessmentService.cs",
-              "RelativeToolTip": "Services\\BodyAssessment\\BodyAssessmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Title": "BodyAssessmentController.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Controllers\\BodyAssessmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BodyAssessmentController.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Controllers\\BodyAssessmentController.cs",
+              "RelativeToolTip": "Controllers\\BodyAssessmentController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:13:09.727Z",
+              "WhenOpened": "2025-03-17T18:54:46.936Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "IBodyAssessmentService.cs",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\IBodyAssessmentService.cs",
               "RelativeDocumentMoniker": "Services\\BodyAssessment\\IBodyAssessmentService.cs",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\IBodyAssessmentService.cs",
               "RelativeToolTip": "Services\\BodyAssessment\\IBodyAssessmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T11:12:46.906Z",
               "IsPinned": true,
@@ -290,57 +242,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultationService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Consultation\\ConsultationService.cs",
-              "RelativeDocumentMoniker": "Services\\Consultation\\ConsultationService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Consultation\\ConsultationService.cs",
-              "RelativeToolTip": "Services\\Consultation\\ConsultationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BodyAssessmentService.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\BodyAssessmentService.cs",
+              "RelativeDocumentMoniker": "Services\\BodyAssessment\\BodyAssessmentService.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\BodyAssessment\\BodyAssessmentService.cs",
+              "RelativeToolTip": "Services\\BodyAssessment\\BodyAssessmentService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:09:54.339Z",
+              "WhenOpened": "2025-03-11T11:13:09.727Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IConsultationService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Consultation\\IConsultationService.cs",
-              "RelativeDocumentMoniker": "Services\\Consultation\\IConsultationService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Consultation\\IConsultationService.cs",
-              "RelativeToolTip": "Services\\Consultation\\IConsultationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "SavesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Models\\Saves\\SavesViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\Saves\\SavesViewModel.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Models\\Saves\\SavesViewModel.cs",
+              "RelativeToolTip": "Models\\Saves\\SavesViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwAwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:09:37.371Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FoodService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Food\\FoodService.cs",
-              "RelativeDocumentMoniker": "Services\\Food\\FoodService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Food\\FoodService.cs",
-              "RelativeToolTip": "Services\\Food\\FoodService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:08:48.522Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IFoodService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Food\\IFoodService.cs",
-              "RelativeDocumentMoniker": "Services\\Food\\IFoodService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\Nutrition\\Services\\Food\\IFoodService.cs",
-              "RelativeToolTip": "Services\\Food\\IFoodService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:08:35.409Z",
+              "WhenOpened": "2025-03-17T19:33:41.264Z",
               "IsPinned": true,
               "EditorCaption": ""
             }

@@ -27,4 +27,10 @@ namespace Nutrition.Models.DataBase
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
     }
+
+    public class ConsultationIdAndNames
+    {
+        public int ConsultationId { get; set; }
+        public string ConsultationName { get; set; }
+    }
 }

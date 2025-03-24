@@ -10,4 +10,8 @@
         public string User { get; set; }
         public string Consultation { get; set; }
     }
+    public class FilterFoodViewModel
+    {
+        public string Name { get; set; }
+    }
 }

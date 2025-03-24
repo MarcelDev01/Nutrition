@@ -48,4 +48,10 @@ namespace Nutrition.Models.Saves
         public int UserId { get; set; }
         public int ConsultationId { get; set; }
     }
+
+    public class SaveFoodViewModel
+    {
+        public int FoodId { get; set; }
+        public string Name { get; set; }
+    }
 }

@@ -14,4 +14,12 @@
     {
         public string Name { get; set; }
     }
+
+    public class FilterConsultationViewModel
+    {
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
+        public string Name { get; set; }
+        public int UserId { get; set; }
+    }
 }

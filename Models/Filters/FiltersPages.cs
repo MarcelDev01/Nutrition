@@ -22,4 +22,9 @@
         public string Name { get; set; }
         public int UserId { get; set; }
     }
+
+    public class FilterTrainningViewModel
+    {
+        public string Name { get; set; }
+    }
 }

@@ -62,4 +62,15 @@ namespace Nutrition.Models.Saves
         public string Date { get; set; }
         public int UserId { get; set; }
     }
+
+    public class SaveTrainningViewModel
+    {
+        public int TrainningId { get; set; }
+        public string Name { get; set; }
+        public string Observation { get; set; }
+        public int Series { get; set; }
+        public int Reps { get; set; }
+        public int UserId { get; set; }
+        public int CategoryTrainningId { get; set; }
+    }
 }

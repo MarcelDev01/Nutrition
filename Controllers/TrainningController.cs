@@ -42,7 +42,7 @@ namespace Nutrition.Controllers
         }
 
         [HttpPost]
-        public IActionResult SaveTrainning([FromBody] SaveUserViewModel p_Data)
+        public IActionResult SaveTrainning([FromBody] SaveTrainningViewModel p_Data)
         {
             if (p_Data == null)
             {

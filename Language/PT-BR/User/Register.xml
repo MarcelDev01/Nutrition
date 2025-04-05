@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<entries>
+  <entry key="TitleDetails">Detalhes do usuário</entry>
+  <entry key="TitleAddUser">Cadastro de usuário</entry>
+
+  <entry key="FormName">Nome</entry>
+  <entry key="FormPermission">Permissão</entry>
+  <entry key="FormBirthDay">Data de nascimento</entry>
+  <entry key="FormAge">Idade</entry>
+  <entry key="FormHeight">Altura</entry>
+  <entry key="FormWeight">Peso</entry>
+  <entry key="FormEmail">Email</entry>
+  <entry key="FormLogin">Login</entry>
+  <entry key="FormPassword">Senha</entry>
+  <entry key="FormUserActive">Usuário ativo</entry>
+
+  <entry key="ButtonSave">Salvar</entry>
+  <entry key="ButtonBack">Voltar</entry>
+</entries>

@@ -1,1 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<entries>
+  <entry key="Title">Usuários</entry>
+  <entry key="AddUser">Adicionar usuário</entry>
+  
+  <entry key="TitleFilters">Filtros</entry>
+  <entry key="FilterName">Nome</entry>
+  <entry key="FilterEmail">Email</entry>
+  
+  <entry key="ButtonSearch">Pesquisar</entry>
+  <entry key="ButtonClear">Limpar</entry>
+  
+  <entry key="UsersFounds">Total de usuários encontrados:</entry>
+  
+  <entry key="TableHeaderName">Nome</entry>
+  <entry key="TableHeaderEmail">Email</entry>
+  
+  <entry key="NotFounds">Nenhum registro encontrado</entry>
+</entries>

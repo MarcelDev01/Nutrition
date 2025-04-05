@@ -29,4 +29,9 @@
     <Folder Include="Views\Report\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Models\Nutrition.Models.csproj" />
+    <ProjectReference Include="..\Nutrition.Services\Nutrition.Services.csproj" />
+  </ItemGroup>
+
 </Project>

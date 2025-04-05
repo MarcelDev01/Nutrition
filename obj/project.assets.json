@@ -1608,6 +1608,32 @@
             "rid": "win"
           }
         }
+      },
+      "Nutrition.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Nutrition.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nutrition.Models.dll": {}
+        }
+      },
+      "Nutrition.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Nutrition.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nutrition.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nutrition.Services.dll": {}
+        }
       }
     }
   },
@@ -4724,12 +4750,24 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Nutrition.Models/1.0.0": {
+      "type": "project",
+      "path": "../Nutrition.Models/Nutrition.Models.csproj",
+      "msbuildProject": "../Nutrition.Models/Nutrition.Models.csproj"
+    },
+    "Nutrition.Services/1.0.0": {
+      "type": "project",
+      "path": "../Nutrition.Services/Nutrition.Services.csproj",
+      "msbuildProject": "../Nutrition.Services/Nutrition.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.1",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.1"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.1",
+      "Nutrition.Models >= 1.0.0",
+      "Nutrition.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4763,7 +4801,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\diego\\source\\repos\\Nutrition.Models\\Nutrition.Models.csproj": {
+              "projectPath": "C:\\Users\\diego\\source\\repos\\Nutrition.Models\\Nutrition.Models.csproj"
+            },
+            "C:\\Users\\diego\\source\\repos\\Nutrition.Services\\Nutrition.Services.csproj": {
+              "projectPath": "C:\\Users\\diego\\source\\repos\\Nutrition.Services\\Nutrition.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

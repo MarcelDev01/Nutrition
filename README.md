@@ -21,4 +21,4 @@ Além disso, o sistema facilita a comunicação entre o profissional e o pacient
                    
 ## 📝 Diagrama:
 
-<img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unifiedmodelinglanguage/unifiedmodelinglanguage-original.svg" />
+![image](https://github.com/user-attachments/assets/5021e9c9-7c2b-4bb7-900a-99e32c61e09f)

@@ -15,6 +15,9 @@ Além disso, o sistema facilita a comunicação entre o profissional e o pacient
 <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" />
 <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" />
 <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+
+<br/>
+<br/>
                    
 ## 📝 Diagrama:
 
